@@ -245,18 +245,21 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
+  align-items: center;
   border: solid 1px currentColor;
+  display: flex;
   height: 19px;
+  justify-content: center;
   margin-right: 3px;
-  position: relative;
   width: 19px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   background-color: currentColor;
   content: '';
-  inset: 1px;
-  position: absolute;
+  display: block;
+  height: 15px;
+  width: 15px;
 }
 
 .search-form__submit-button {
