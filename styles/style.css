@@ -80,7 +80,6 @@ ol {
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr 399px;
-  grid-template-rows: 529px;
   width: 100%;
   align-items: end;
 }
@@ -97,6 +96,7 @@ ol {
 }
 
 .content__list-container {
+  height: 299px;
   overflow: auto;
   position: relative;
   padding: 3px 3px 2px;
@@ -156,14 +156,16 @@ ol {
 }
 
 .content__video-card-description {
+  display: -webkit-box;
   font-family: var(--font-primary), sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+  line-clamp: 4;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .content__video-card-thumbnail {
@@ -292,7 +294,7 @@ ol {
 }
 
 .button:active {
-  background-color: currentColor;
+  background-color: var(--color-accent);
 }
 
 .button:focus {
@@ -305,6 +307,7 @@ ol {
 }
 
 .more-button {
+  margin-top: 30px;
   width: 100%;
 }
 
@@ -324,6 +327,7 @@ ol {
 .result__video {
   height: 100%;
   object-fit: cover;
+  object-position: center;
   width: 100%;
 }
 
